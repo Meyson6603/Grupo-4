@@ -1,0 +1,385 @@
+/* --------- GERAL --------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  padding-top: 62px;
+}
+
+.main-container-general {
+  display: flex;
+  flex-direction: column;
+  /* Organiza os elementos lado a lado */
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  /* Faz o container ocupar o espaço restante */
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+  /* Garante que o container ocupe toda a largura */
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* --------- CONTAINER PRINCIPAL --------- */
+.main-container {
+  font-size: 1rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* --------- CABEÇALHO --------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 61px;
+  background-color: #333;
+  color: white;
+  padding: 15px 100px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.header__logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.header__simulator {
+  background-color: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+}
+
+.header__actions a {
+  margin-left: 10px;
+}
+
+.header__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Estilo para o link ativo no menu */
+.header__link.active {
+  color: #16a34a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Estilo inicial do botão "Simulador" */
+.header__simulator {
+  background-color: #16a34a;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+/* Inversão de cores no hover */
+.header__simulator:hover {
+  background-color: #fff;
+  color: #16a34a;
+  border: 0px solid #16a34a;
+}
+
+/* Garante que o estado ativo (selecionado) do botão seja visível */
+.header__simulator.active {
+  background-color: #fff;
+  color: #16a34a;
+  border: 1px solid #16a34a;
+}
+
+/* --------- BOX PRINCIPAL --------- */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1240px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.box__calendar {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+
+.box__line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: auto;
+  background-color: #ccc;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.box__left-section {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 80px;
+}
+
+.box__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.box__greeting {
+  font-size: 24px;
+  color: #262626;
+  line-height: 1.5;
+}
+
+.box__weather {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+
+.box__info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.box__group,
+.box__group-secondary {
+  display: flex;
+  flex-direction: column;
+}
+
+.box__text,
+.box__text-secondary {
+  font-size: 16px;
+  color: #262626;
+}
+
+.box__income {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+.box__expense {
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+}
+
+.box__divider {
+  width: 1px;
+  height: 50px;
+  background-color: #ccc;
+}
+
+.box__right-section {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.box__quick-access {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.box__icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.box__icons img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+/* --------- CARDS --------- */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cards--left,
+.cards--right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1 1 48%;
+}
+
+.card {
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  min-height: 7.5rem;
+}
+
+.card__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card__text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #262626;
+}
+
+.card__value {
+  font-size: 24px;
+  font-weight: 400;
+  color: #262626;
+}
+
+.card__currency {
+  font-weight: 700;
+}
+
+.cards__images {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+/* --------- MENU DE CONFIGURAÇÕES --------- */
+.settings-menu {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 200px;
+}
+
+.settings-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.settings-menu__item {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.settings-menu__item:hover {
+  background-color: #f0f0f0;
+  color: #08c087;
+}
+
+/* --------- RESPONSIVIDADE --------- */
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .box__line {
+    display: none;
+  }
+
+  .box__left-section {
+    padding-left: 0;
+  }
+
+  .box__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .box__divider {
+    display: none;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards--left,
+  .cards--right {
+    width: 100%;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
